@@ -3,6 +3,7 @@ using App.Core.Services;
 using App.Data.Model;
 using App.Data.Model.Common;
 using AutoMapper;
+using IdentityServer4.AccessTokenValidation;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -36,6 +37,7 @@ namespace App.Api.Controllers
         }
 
         [HttpGet("{id}")]
+        [Authorize(AuthenticationSchemes = IdentityServerAuthenticationDefaults.AuthenticationScheme)]
         public async Task<IActionResult> Get(int id, CancellationToken cancellationToken)
         {
             Restaurant restaurant = await _restaurantService.FindAsync(id, cancellationToken);
@@ -48,7 +50,7 @@ namespace App.Api.Controllers
         }
 
         [HttpPost]
-        [Authorize]
+        [Authorize(AuthenticationSchemes = IdentityServerAuthenticationDefaults.AuthenticationScheme)]
         public async Task<IActionResult> Post([FromBody] RestaurantDto dto, CancellationToken cancellationToken)
         {
             if (!ModelState.IsValid)
@@ -69,7 +71,7 @@ namespace App.Api.Controllers
         }
 
         [HttpPut("{id}")]
-        [Authorize]
+        [Authorize(AuthenticationSchemes = IdentityServerAuthenticationDefaults.AuthenticationScheme)]
         public async Task<IActionResult> Put(int id, [FromBody] RestaurantDto dto, CancellationToken cancellationToken)
         {
             if (!ModelState.IsValid)
@@ -93,7 +95,7 @@ namespace App.Api.Controllers
         }
 
         [HttpDelete("{id}")]
-        [Authorize]
+        [Authorize(AuthenticationSchemes = IdentityServerAuthenticationDefaults.AuthenticationScheme)]
         public async Task<IActionResult> Delete(int id, CancellationToken cancellationToken)
         {
             Restaurant restaurant = await _restaurantService.FindAsync(id, cancellationToken);

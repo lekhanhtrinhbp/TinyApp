@@ -5,6 +5,7 @@ using App.Core.Services;
 using App.Data;
 using App.Data.Model;
 using AutoMapper;
+using IdentityServer4.AccessTokenValidation;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -85,6 +86,16 @@ namespace App.Api
                 .AddAspNetIdentity<User>()
                 .AddResourceOwnerValidator<ResourceOwnerPasswordValidator>()
                 .AddProfileService<ProfileService>();
+
+            services.AddAuthentication(IdentityServerAuthenticationDefaults.AuthenticationScheme)
+                .AddIdentityServerAuthentication(o =>
+                {
+                    // base-address of your identityserver
+                    o.Authority = "http://localhost:52304";
+                    o.RequireHttpsMetadata = false;
+                    // name of the API resource
+                    o.ApiName = "api1";
+                });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
