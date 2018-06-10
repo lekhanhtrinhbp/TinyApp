@@ -1,0 +1,11 @@
+Server/TinyApp/.vs/
+Server/TinyApp/App.Api/bin/
+Server/TinyApp/App.Api/obj/
+Server/TinyApp/App.Common/bin/
+Server/TinyApp/App.Common/obj/
+Server/TinyApp/App.Core/bin/
+Server/TinyApp/App.Core/obj/
+Server/TinyApp/App.Data.Model/bin/
+Server/TinyApp/App.Data.Model/obj/
+Server/TinyApp/App.Data/bin/
+Server/TinyApp/App.Data/obj/
