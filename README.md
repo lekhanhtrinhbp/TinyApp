@@ -12,7 +12,7 @@ This is tiny application, at the time start the application I crawed restaurant 
 - htmlagilitypack to crawler [RestaurantCrawler.cs](https://github.com/newbiecse/TinyApp/blob/master/Server/App.Core/Services/RestaurantCrawler.cs).
 - Generic repository in c#.
 ### Setup guiline:
-1. Change connectstring add [/\App.Api/appsettings.json](https://github.com/newbiecse/TinyApp/blob/master/Server/App.Api/appsettings.json)
+1. Change connectstring add [App.Api/appsettings.json](https://github.com/newbiecse/TinyApp/blob/master/Server/App.Api/appsettings.json)
 2. Make sure dotnet core SDK is installed
 3. At the root project server folder cd to App.Api project:
     ```
@@ -35,6 +35,8 @@ This is tiny application, at the time start the application I crawed restaurant 
 - Use information like following screenshot to login
 ![Login](https://image.ibb.co/nGouho/login.png)
 
+### Resaurant API:
+- [http://localhost:52304/api/v1/restaurants](http://localhost:52304/api/v1/restaurants)
 
 ## Client:
 ### Technical stack:
