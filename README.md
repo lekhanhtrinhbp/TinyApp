@@ -18,13 +18,7 @@ This is tiny application, at the time start the application I crawed restaurant 
         cd App.Api
         ```
 3. At the command line run flowing stament to initialize database:
-```
-        dotnet ef database update --startup-project ../App.Api -c PersistedGrantDbContext
 
-        dotnet ef database update --startup-project ../App.Api -c ConfigurationDbContext
-        
-        dotnet ef database update --startup-project ../App.Api -c AppDbContext
-        ```
 4. Run the application:
         ```
             dotnet run
