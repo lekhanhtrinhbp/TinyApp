@@ -1,4 +1,5 @@
-﻿using App.Data;
+﻿using App.Core.Services;
+using App.Data;
 using App.Data.Model;
 using IdentityServer4.EntityFramework.DbContexts;
 using IdentityServer4.EntityFramework.Mappers;
@@ -28,6 +29,8 @@ namespace App.Api
                 InitIdentitySrv4(context);
 
                 await InitUsers(scope);
+
+                await InitRestaurants(scope);
             }
         }
 
@@ -73,6 +76,17 @@ namespace App.Api
             else
             {
                 Console.WriteLine("ApiResources already populated");
+            }
+        }
+
+        private static async Task InitRestaurants(IServiceScope scope)
+        {
+            var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+
+            if (!context.Restaurants.Any())
+            {
+                var crawler = scope.ServiceProvider.GetRequiredService<IRestaurantCrawler>();
+                await crawler.Craw();
             }
         }
 
