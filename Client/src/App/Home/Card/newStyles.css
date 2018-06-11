@@ -1,0 +1,69 @@
+.card {
+    display: flex !important;
+    flex-direction: column !important;
+    border-radius: unset !important;
+}
+
+:global(.ui.card) > .card {
+    border-radius: unset !important;
+}
+
+.image {
+    flex-shrink: 1.5;
+    background-size: cover;
+    background-position: center;
+}
+
+.image img{
+    height: 100% !important;
+    width: 100% !important;
+    object-fit: cover;
+}
+
+.content {
+    flex-grow: 1 !important;
+    margin-top: 0 !important;
+    box-shadow: none !important;
+    max-width: 540px !important;
+}
+
+.time {
+    display: block;
+    /* font-size: 12px; */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--main-green-3) !important;
+    padding-bottom: 12px;
+}
+
+.time span {
+    margin-left: 20px;
+}
+
+.actions, .footer {
+    background-color: var(--main-green-3) !important;
+    color: #ffffff !important;
+}
+
+:global(.ui.card) > .footer {
+    border-radius: unset !important;
+}
+
+.hastag {
+    color: #ffffff;
+    /* font-size: 12px; */
+    float: left;
+    align-items: center;
+}
+
+.icon {
+    color: var(--background-1);
+    cursor: pointer;
+}
+
+@media screen and (min-width: 769px) {
+    .card {
+        flex-direction: row !important;
+        box-shadow: none !important;
+    }
+}

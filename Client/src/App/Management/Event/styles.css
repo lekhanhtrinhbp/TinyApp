@@ -1,0 +1,40 @@
+.main {
+  background-color: var(--background-1);
+}
+
+.title {
+  padding-top: 12px;
+  padding-left: 12px;
+  /* font-size: 20px; */
+  line-height: 30px;
+  /* font-weight: 400; */
+  color: var(--main-1);
+  cursor: pointer;
+}
+
+.title:hover {
+  color: var(--main-2);
+  text-decoration: underline;
+}
+
+.time {
+  padding-left: 12px;
+  color: var(--text);
+}
+
+.actions {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  overflow: hidden;
+}
+
+.item {
+  color: var(--main-1);
+  cursor: pointer;
+  padding-left: 12px;
+  float: left;
+}
+
+.item:hover {
+  color: var(--main-2);
+}

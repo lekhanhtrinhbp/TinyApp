@@ -1,0 +1,182 @@
+.result {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.item {
+  flex: 0 0 var(--event-card-flex);
+  padding: 8px;
+}
+
+.category {
+  margin: 0 1%;
+  margin-top: 24px;
+}
+
+.buttons {
+  padding: 12px 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  color: var(--button);
+  background: var(--background-2);
+  padding: 12px 36px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid var(--button);
+}
+
+.button:visited {
+  color: var(--button);
+}
+
+.button:hover {
+  color: var(--button-hover);
+  border-color: var(--button-hover);
+}
+
+.topicColumn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0px;
+}
+
+.topicIcon {
+  flex: 1;
+  text-align: right;
+  padding-right: 15px;
+}
+
+.topicSection {
+  width: 100%;
+  /* height: 120px; */
+  background-color: #ffffff;
+  margin: 0px;
+}
+
+.topic {
+  width: 30%;
+  float: left;
+  padding: 10px;
+}
+
+.topicContent {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  clear: left;
+  /* border: 1px solid blue; */
+}
+
+.topicSeparate {
+  clear: left;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.carouselContainer {
+  position: relative;
+}
+
+.btnBackContainer {
+  position: absolute;
+  left: -10px;
+  top: 48%;
+}
+
+.btnNextContainer {
+  position: absolute;
+  right: -10px;
+  top: 48%;
+}
+
+@media (min-width: 320px) {
+  /* smartphones, iPhone, portrait 480x320 phones */
+  .mainContent {
+    padding: 50px 0px;
+    padding-bottom: 25px;
+  }
+  .topicText {
+    display: none;
+  }
+}
+
+@media (min-width: 481px) {
+  /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+  .mainContent {
+    padding: 50px 0px;
+    padding-bottom: 25px;
+  }
+  .topicContainer {
+    margin: 0px 0px;
+    height: 100%;
+  }
+  .topicText {
+    display: none;
+  }
+}
+
+@media (min-width: 641px) {
+  /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+  .mainContent {
+    padding: 50px 0px;
+    padding-bottom: 25px;
+  }
+  .topicContainer {
+    margin: 0px 50px;
+    /* border: 1px solid red; */
+    height: 100%;
+  }
+  .topicText {
+    display: initial;
+  }
+  .subscribeSection {
+    background-color: var(--main-green-3);
+    padding: 10px 50px;
+  }
+}
+
+@media (min-width: 961px) {
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
+  /* .mainContent {
+    padding: 50px 100px;
+  } */
+
+  .subscribeSection {
+    background-color: var(--main-green-3);
+    padding: 10px 50px;
+  }
+}
+
+@media (min-width: 1025px) {
+  /* big landscape tablets, laptops, and desktops */
+  /* .mainContent {
+    padding: 50px 100px;
+  } */
+
+  .subscribeSection {
+    background-color: var(--main-green-3);
+    padding: 10px 100px;
+  }
+}
+
+@media (min-width: 1281px) {
+  /* hi-res laptops and desktops */
+  /* .mainContent {
+    padding: 50px 100px;
+  } */
+
+  .subscribeSection {
+    background-color: var(--main-green-3);
+    padding: 10px 200px;
+  }
+}

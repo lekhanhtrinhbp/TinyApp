@@ -1,0 +1,70 @@
+.inputFile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.labelInput {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  /*border: 1px dashed var(--text);*/
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.labelInput:hover {
+  color: var(--button);
+  border-color: var(--button);
+}
+
+.labelInput i {
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+.labelInput i:hover {
+  color: var(--button);
+}
+
+.segmentImage {
+  height: 360px;
+}
+
+.imagePreview {
+  width: 100%;
+  height: 100%;
+}
+
+.removeButton {
+  float: right;
+  cursor: pointer;
+}
+
+.removeButton:hover {
+  color: blue;
+}
+
+.recommend {
+  margin-top: 36px;
+}
+
+@media screen and (min-width: 769px) {
+  .segmentImage {
+    box-shadow: none !important;
+    border: none !important;
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .remove {
+    width: 50%;
+  }
+}
+

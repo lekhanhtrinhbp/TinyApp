@@ -33,7 +33,7 @@ namespace App.Api.Controllers
         {
             var restaurants = await _restaurantService.FindAllAsync(pagination, fields?.Split(','), cancellationToken);
 
-            return Ok(restaurants.Select(_mapper.Map<RestaurantDto>));
+            return Ok(new ApiResponse<RestaurantDto>(pagination,restaurants.Select(_mapper.Map<RestaurantDto>)));
         }
 
         [HttpGet("{id}")]

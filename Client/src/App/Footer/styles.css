@@ -1,0 +1,31 @@
+.main {
+  padding: 24px 0px;
+  background: #282c35;
+}
+
+.container {
+  display: flex;
+  max-width: 1080px;
+  margin: 12px auto;
+  /* font-size: 12px; */
+  line-height: 18px;
+  /* font-weight: 400; */
+  line-height: 1.9;
+}
+
+.item {
+  flex: 1;
+  color: #adb0b6;
+}
+
+.options {
+  width: 100%;
+  display: block;
+  color: #adb0b6;
+}
+
+.options:hover {
+  color: #adb0b6;
+  text-decoration: underline;
+  cursor: pointer;
+}

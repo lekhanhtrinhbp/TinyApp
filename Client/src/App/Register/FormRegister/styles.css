@@ -1,0 +1,42 @@
+.register {
+  background: var(--dark-grass-green) !important;
+  color: var(--text-3) !important;
+  cursor: pointer !important;
+}
+
+.register:hover {
+  background: var(--main-green-1) !important;
+}
+
+.register:disabled:hover {
+  background-color: var(--button-hover4) !important;
+  color: var(--text-3) !important;
+  cursor: no-drop !important;
+}
+
+:global(.ui.disabled.button) {
+  pointer-events: unset !important;
+  cursor: unset !important;
+}
+
+:global(.ui.disabled.button:hover) {
+  pointer-events: unset !important;
+  cursor: no-drop !important;
+}
+
+.header {
+  display: flex !important;
+  margin: 12px 0px !important;
+  justify-content: center !important;
+}
+
+.content {
+  display: flex !important;
+  text-align: center !important;
+  margin: 24px 12px !important;
+  justify-content: center !important;
+}
+
+.email {
+  background-color: #f0ffe1 !important;
+}

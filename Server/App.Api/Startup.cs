@@ -6,22 +6,27 @@ using App.Data;
 using App.Data.Model;
 using AutoMapper;
 using IdentityServer4.AccessTokenValidation;
+using IdentityServer4.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using System.Reflection;
 
 namespace App.Api
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration, ILoggerFactory loggerFactory)
         {
             Configuration = configuration;
+            _logger = loggerFactory.CreateLogger<DefaultCorsPolicyService>();
         }
+
+        private ILogger<DefaultCorsPolicyService> _logger;
 
         public IConfiguration Configuration { get; }
 
@@ -96,6 +101,22 @@ namespace App.Api
                     // name of the API resource
                     o.ApiName = "api1";
                 });
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy",
+                    builder => builder.AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader()
+                        .AllowCredentials());
+            });
+
+            var cors = new DefaultCorsPolicyService(_logger)
+            {
+                AllowAll = true
+                //AllowedOrigins = { "http://localhost:3000" }
+            };
+            services.AddSingleton<ICorsPolicyService>(cors);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -107,7 +128,7 @@ namespace App.Api
             }
 
             app.UseStaticFiles();
-
+            app.UseCors("CorsPolicy");
             app.UseIdentityServer();
 
             app.UseMvc(routes =>

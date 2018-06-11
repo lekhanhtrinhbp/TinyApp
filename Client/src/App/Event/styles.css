@@ -1,0 +1,122 @@
+.container {
+  border: var(--border-value) solid var(--border);
+  border-top-left-radius: var(--border-top-left-right-radius);
+  border-top-right-radius: var(--border-top-left-right-radius);
+  background: var(--background-1);
+}
+
+.header {
+  display: var(--event-header);
+  flex-wrap: wrap;
+}
+
+.main {
+  display: var(--event-header);
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.content {
+  flex: 0 0 70%;
+}
+
+.timeline {
+  flex: 0 0 30%;
+}
+
+.img {
+  flex: 0 0 70%;
+}
+
+.info {
+  flex: 0 0 30%;
+  position: relative;
+  padding-bottom: 48px;
+}
+
+.date {
+  padding: 10px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.title {
+  padding: 10px;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--text-1);
+  letter-spacing: 0.5px;
+  word-break: break-word;
+}
+
+.creator {
+  padding: 10px;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--text);
+}
+
+.fee {
+  padding: 10px;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.register {
+  display: flex;
+  padding: 10px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+}
+
+.button {
+  float: right;
+  padding: 12px 48px;
+  color: var(--button) !important;
+  border: 1px solid var(--button) !important;
+  background: var(--background-1) !important;
+}
+
+.button:hover {
+  color: var(--background-1) !important;
+  background: var(--button) !important;
+}
+
+.icon {
+  padding: 10px;
+  color: var(--main-1);
+  cursor: pointer;
+}
+
+.guide {
+  padding-top: 24px;
+  padding-bottom: 12px;
+  /* font-weight: 600;
+  font-size: 18px; */
+  line-height: 18px;
+  color: var(--text-1);
+  text-transform: uppercase;
+}
+
+.description {
+  line-height: 22px;
+  color: var(--text);
+}
+
+.success {
+  text-align: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  margin: 12px;
+}

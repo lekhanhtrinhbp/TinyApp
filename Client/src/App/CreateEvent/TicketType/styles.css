@@ -1,0 +1,7 @@
+.input input {
+  background-color: var(--background-1) !important;
+  border: none !important;
+  border-bottom: 1px solid var(--border) !important;
+  border-radius: 0px !important;
+  text-indent: 0.5em !important;
+}

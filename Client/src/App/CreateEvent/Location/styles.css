@@ -1,0 +1,43 @@
+.input input {
+  background-color: var(--background-1) !important;
+  border: none !important;
+  border-bottom: 1px solid var(--border) !important;
+  border-radius: 0px !important;
+  text-indent: 0.5em !important;
+}
+
+.inputSearch {
+  border: none !important;
+  border-bottom: 1px solid var(--border) !important;
+  border-radius: 0px !important;
+  text-indent: 0.5em !important;
+}
+
+.link {
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+.link:hover {
+  color: blue;
+}
+
+.addLocation > * {
+  margin-top: 5px !important;
+}
+
+.dropdown {
+  display: block !important;
+  border-radius: 0 !important;
+  border: none !important;
+  border-bottom: 1px solid var(--border) !important;
+  background-color: var(--background-2) !important;
+}
+
+.mapLocation {
+  height: 48vh;
+  width: 100%;
+  padding: 2px 2px !important;
+  border-color: var(--main-green-2) !important;
+  background: var(--main-green-2) !important;
+}

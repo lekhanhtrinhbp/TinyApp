@@ -1,0 +1,17 @@
+.input input {
+  background-color: var(--background-1) !important;
+  border: none !important;
+  border-bottom: 1px solid var(--border) !important;
+  border-radius: 0px !important;
+  min-width: 200px !important;
+  text-indent: 0.5em !important;
+}
+
+.maskEmail {
+  background-color: var(--background-1) !important;
+  border: none !important;
+  border-bottom: 1px solid var(--border) !important;
+  border-radius: 0px !important;
+  min-width: 200px !important;
+  text-indent: 0.5em !important;
+}

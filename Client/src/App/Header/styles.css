@@ -1,0 +1,29 @@
+.item {
+  align-self: auto !important;
+}
+
+.mobile {
+  display: none !important;
+}
+
+.desktop {
+  display: flex !important;
+}
+
+.greenHeaderTop {
+  box-shadow: 0px 4px 2px 0px rgba(201, 197, 201, 1) !important;
+  border: none !important;
+  background-color: var(--main-green-1) !important;
+  margin: 0 !important;
+  margin-bottom: 5px !important;
+}
+
+@media (max-width: 768px) {
+  .mobile {
+    display: flex !important;
+  }
+
+  .desktop {
+    display: none !important;
+  }
+}

@@ -1,0 +1,148 @@
+.main {
+  padding: 0px;
+  position: relative;
+  height: 500px;
+  z-index: 1;
+}
+
+.banner {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 500px;
+  width: 100%;
+  z-index: 2;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 3;  
+}
+
+.searchSection {
+  height: 100%;
+  width: 100%;
+  top: 30%;
+  left: 0;
+  position: absolute;
+  padding: 0;
+  transition: opacity .5s;
+  z-index: 4;
+}
+
+.titleContainer {
+  margin-bottom: 10px;
+}
+
+.subTitleContainer {
+  margin-bottom: 15px;
+}
+
+.title {
+  text-align: center;
+  color: var(--main-3);
+  /* font-weight: 300; */
+}
+
+.subTitle {
+  text-align: center;
+  color: var(--main-3);
+  font-weight: 300;
+}
+
+.field {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.search {
+  background-color: var(--background-2);
+  border: none;
+  border-bottom: 1px solid var(--border);
+  min-width: 300px;
+  text-indent: 0.5em;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  padding-left: 10px;
+}
+
+.search:focus {
+  outline: none;
+}
+
+.button {
+  background-color: var(--button);
+  /* margin-left: 6px; */
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border: 0px;
+  color: var(--background-1);
+  padding: 0px 13px;
+  cursor: pointer;
+  /* font-weight: 500;
+    font-size: 16px; */
+}
+
+.button:focus {
+  outline: none !important;
+}
+
+.dropdown {
+  margin-left: 2px;
+  display: block !important;
+  border-radius: 0 !important;
+  border: none !important;
+  border-bottom: 1px solid var(--border) !important;
+  background-color: var(--background-2) !important;
+  padding-left: 10px !important;
+}
+
+.dropdown:focus {
+  outline: none !important;
+}
+
+.dropdown :global .text.default{
+  color: rgb(117, 117, 117) !important;
+}
+
+.dropdown input {
+  padding-left: 10px !important;
+}
+
+.dropdown input + div {
+  text-overflow: clip;
+  max-width: 160px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.location {
+  background-color: var(--background-2);
+  margin-left: 6px;
+  display: block;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  border-right: none;
+  min-width: 200px;
+  text-indent: 0.5em;
+}
+
+.location:focus {
+  outline: none;
+}
+
+@media (max-width: 710px) {
+  .search{
+    min-width: 250px !important;
+  }
+  .dropdown,
+  .location {
+    display: none !important;
+  }
+}

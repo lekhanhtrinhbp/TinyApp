@@ -1,0 +1,50 @@
+.search, .location {
+  margin-top: 4px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  text-indent: 0.5em;
+  background-color: var(--background-2);
+}
+
+.search:focus, .location:focus {
+  outline: none;
+}
+
+.accordion {
+  border-bottom: 1px solid var(--border);
+  margin-top: 12px;
+}
+
+.dropdown {
+    display: block !important;
+    border-radius: 0 !important;
+    border: none !important;
+    border-bottom: 1px solid var(--border) !important;
+    background-color: var(--background-2) !important;
+    padding-left: 8px !important;
+}
+
+.dropdown:focus {
+    outline: none !important;
+}
+
+.dropdown :global .text.default{
+    color: rgb(117, 117, 117) !important;
+}
+
+.dropdown input {
+    padding-left: 8px !important;
+}
+
+.dropdown input + div {
+    text-overflow: clip;
+    max-width: 160px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.main {
+    margin-top: 2em !important;
+    margin-bottom: 2em !important;
+}

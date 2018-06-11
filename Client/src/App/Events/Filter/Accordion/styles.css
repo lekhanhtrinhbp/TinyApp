@@ -1,0 +1,42 @@
+.header {
+  cursor: pointer;
+  color: var(--main-1);
+  padding-bottom: 12px;
+}
+
+.right {
+  float: right;
+  /* font-size: 24px; */
+}
+
+.select {
+  display: var(--select);
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.hide {
+  max-height: 0;
+}
+
+.options {
+  padding-bottom: 12px;
+  flex: 0 0 var(--options);
+  color: var(--main-1);
+  cursor: pointer;
+}
+
+.options:hover {
+  color: var(--main-2);
+}
+
+.active {
+  padding-bottom: 6px;
+  padding-top: 6px;
+  flex: 0 0 var(--options);
+  color: var(--main-1);
+  cursor: pointer;
+  background: var(--main-green-2) !important;
+  color: var(--text-3) !important;
+  /* font-weight: 600; */
+}

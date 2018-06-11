@@ -1,0 +1,155 @@
+.variable {
+  --background-1: #fff;
+  --background-2: #f8f8fa;
+  --background-hover: #eff2f5;
+  --border: #d2d6df;
+  --text: #757a81;
+  --text-1: #45494e;
+  --text-2: #343740;
+  --text-3: #eff2f5;
+  --main-1: #000000;
+  --main-2: #244179;
+  --main-3: #ffffff;
+  --numbering: #0093d7;
+  --button: #92c46d;
+  --button-hover: #244179;
+  --button-hover2: #d1d2d4;
+  --button-hover3: #137438;
+  --button-hover4: #db2828;
+  --event-title: #2d63ce;
+  --ticket-type: #1cb657;
+  --disable: #757a81;
+  /* Home event card */
+  --event-card-flex: 50%;
+  /* Home category card */
+  --item: 31.3%;
+  --item-first: 62.6%;
+  --item-last: 62.6%;
+  /* Events display */
+  --display-styles: flex;
+  --select: block;
+  --options: 100%;
+  /* Event display */
+  --event-header: flex;
+  --border-value: 1px;
+  --border-top-left-right-radius: 4px;
+  /* Main font attribute */
+  --main-font-name: "Comfortaa";
+  --main-font-size: 12px;
+  /* New colors */
+  --main-green-1: #007001;
+  --main-green-2: #80cc6b;
+  --main-green-3: #92c46d;
+  --main-black: #2d2d2d;
+  --main-grey: #f8f8fa;
+  --dark-grass-green: #367c09;
+  --beige-green: #f0ffe1;
+  /* validation color */
+  --error-red: red;
+}
+
+@media (max-width: 768px) {
+  .variable {
+    /* Home events card */
+    --event-card-flex: 100%;
+    /* Home category card */
+    --item: 48%;
+    --item-first: 98%;
+    --item-last: 48%;
+    /* Events display */
+    --display-styles: block;
+    --select: flex;
+    --options: 25%;
+    /*Event display*/
+    --event-header: block;
+    --border-value: 0px;
+    --border-top-left-right-radius: 0px;
+  }
+}
+
+@media (max-width: 415px) {
+  .variable {
+    /* Home event card */
+    /* --event-card-flex: 98%; */
+    /* Home category card */
+    --item: 98%;
+    --item-first: 98%;
+    --item-last: 98%;
+    /* Event display */
+    --select: block;
+    --options: 100%;
+  }
+}
+
+body {
+  margin: 0px;
+  background-color: #f8f8fa;
+  font-family: var(--main-font-name), cursive;
+  font-size: var(--main-font-size);
+  -webkit-font-smoothing: antialiased;
+}
+
+div,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--main-font-name) !important;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: var(--main-font-name) !important;
+}
+
+div {
+  /* border-radius: 0px !important; */
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--main-1);
+}
+
+i {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+i:hover {
+  color: #0093d7;
+}
+
+/* App.css */
+
+.main {
+  margin: 0px auto;
+  min-height: 60vh;
+}
+
+.eticketButton {
+  color: var(--button) !important;
+  border: 1px solid var(--button) !important;
+  background: var(--background-1) !important;
+}
+
+/* Override Semantic UI */
+
+.ui.button {
+  border-radius: 0px !important;
+}
+
+:global(.dimmed.dimmable > .ui.modals.dimmer.visible) {
+  display: flex !important;
+}
+
+:global(.ui.modal > .header) {
+  font-family: Comfortaa, cursive !important;
+}

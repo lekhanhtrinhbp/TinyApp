@@ -1,0 +1,21 @@
+.columnDisplay {
+  display: flex !important;
+  flex-direction: row !important;
+}
+.eventTitlePC {
+  color: var(--button) !important;
+  /* font-weight: 400 !important;
+    font-size: 36px !important; */
+}
+.input {
+  width: 100%;
+  margin-top: 4px;
+  border: none;
+  border-bottom: 1px solid var(--border);
+}
+.btnCancel {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 12px;
+}

@@ -1,0 +1,17 @@
+.main {
+  display: var(--display-styles);
+  padding: 0 12px;
+  align-items: flex-start;
+  margin:0 auto;
+  max-width: 1180px;
+}
+
+.filter {
+  padding: 8px;
+  flex: 1 auto;
+}
+
+.result {
+  margin-top: 24px;
+  flex: 1 1 75%;
+}

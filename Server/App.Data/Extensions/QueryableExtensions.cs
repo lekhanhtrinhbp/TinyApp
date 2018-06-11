@@ -61,14 +61,14 @@ namespace App.Data.Extensions
                     query = query.OrderBy($"{pagination.Field} {pagination.Sort}");
                 }
 
-                if (pagination.Page > 1 && pagination.Perpage > 0)
+                if (pagination.Page > 1 && pagination.PageSize > 0)
                 {
-                    query = query.Skip((pagination.Page - 1) * pagination.Perpage);
+                    query = query.Skip((pagination.Page - 1) * pagination.PageSize);
                 }
 
-                if (pagination.Perpage > 0)
+                if (pagination.PageSize > 0)
                 {
-                    query = query.Take(pagination.Perpage);
+                    query = query.Take(pagination.PageSize);
                 }
             }
 

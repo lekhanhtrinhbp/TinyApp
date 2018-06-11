@@ -1,0 +1,10 @@
+.ticketType {
+  color: var(--main-1) !important;
+  border: 1px solid var(--ticket-type) !important;
+  background: var(--background-1) !important;
+  margin-bottom: 24px !important;
+}
+
+.ticketType:not(:last-child) {
+  margin-right: 24px;
+}
