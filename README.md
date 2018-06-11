@@ -12,17 +12,25 @@ This is tiny application, at the time start the application I crawed restaurant 
 - htmlagilitypack to crawler [RestaurantCrawler.cs](https://github.com/newbiecse/TinyApp/blob/master/Server/App.Core/Services/RestaurantCrawler.cs).
 - Generic repository in c#.
 ### Setup guiline:
-1. Make sure dotnet core SDK is installed
-2. At the root project server folder cd to App.Api project:
-        ```
-        cd App.Api
-        ```
-3. At the command line run flowing stament to initialize database:
+1. Change connectstring add [/\App.Api/appsettings.json](https://github.com/newbiecse/TinyApp/blob/master/Server/App.Api/appsettings.json)
+2. Make sure dotnet core SDK is installed
+3. At the root project server folder cd to App.Api project:
+    ```
+    cd App.Api
+    ```
+4. At the command line run flowing stament to initialize database:
+    ```
+        dotnet ef database update --startup-project ../App.Api -c PersistedGrantDbContext
 
-4. Run the application:
-        ```
-            dotnet run
-        ```
+        dotnet ef database update --startup-project ../App.Api -c ConfigurationDbContext
+
+        dotnet ef database update --startup-project ../App.Api -c AppDbContext
+    ```
+5. Run the application:
+    ```
+    dotnet run
+    ```
+
 ## Client:
 ### Technical stack:
 - Reactjs.
