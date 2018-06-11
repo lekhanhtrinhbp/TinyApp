@@ -30,6 +30,11 @@ This is tiny application, at the time start the application I crawed restaurant 
     ```
     dotnet run
     ```
+### Try result:
+#### Login:
+- Use information like following screenshot to login
+![Login](https://image.ibb.co/nGouho/login.png)
+
 
 ## Client:
 ### Technical stack:
