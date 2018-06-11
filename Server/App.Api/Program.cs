@@ -34,8 +34,11 @@ namespace App.Api
             host.Run();
         }
 
-        public static IWebHost BuildWebHost(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
+        public static IWebHost BuildWebHost(string[] args)
+        {
+            var configuration = new ConfigurationBuilder().AddCommandLine(args).Build();
+
+            return WebHost.CreateDefaultBuilder(args)
                 .ConfigureAppConfiguration((context, builder) =>
                 {
                     var env = context.HostingEnvironment;
@@ -64,10 +67,13 @@ namespace App.Api
                         builder.AddCommandLine(args);
                     }
                 })
+                //.UseConfiguration(configuration)
+                .UseUrls("http://localhost:52304")
                 .UseStartup<Startup>()
                 //.UseSerilog((hostingContext, loggerConfiguration) => loggerConfiguration
                 //.ReadFrom.Configuration(hostingContext.Configuration)
                 //.Enrich.FromLogContext())
                 .Build();
+        }
     }
 }

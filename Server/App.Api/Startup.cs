@@ -14,6 +14,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using System;
 using System.Reflection;
 
 namespace App.Api
@@ -24,6 +25,8 @@ namespace App.Api
         {
             Configuration = configuration;
             _logger = loggerFactory.CreateLogger<DefaultCorsPolicyService>();
+
+            Console.WriteLine(@"Configuration[""urls""] = ""{0}""", configuration["urls"]);
         }
 
         private ILogger<DefaultCorsPolicyService> _logger;
