@@ -35,7 +35,7 @@ This is tiny application, at the time start the application I crawed restaurant 
 - Use information like following screenshot to login
 ![Login](https://image.ibb.co/nGouho/login.png)
 
-### Resaurant API:
+### Restaurant API:
 - [http://localhost:52304/api/v1/restaurants](http://localhost:52304/api/v1/restaurants)
 
 ## Client:
