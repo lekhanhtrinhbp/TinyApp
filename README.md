@@ -11,7 +11,7 @@ This is tiny application, at the time start the application I crawed restaurant 
 - AutoMapper.
 - Htmlagilitypack to craw [RestaurantCrawler.cs](https://github.com/newbiecse/TinyApp/blob/master/Server/App.Core/Services/RestaurantCrawler.cs).
 - Generic repository in c#.
-### Setup guiline:
+### Setup guideline:
 1. Change connectstring at [App.Api/appsettings.json](https://github.com/newbiecse/TinyApp/blob/master/Server/App.Api/appsettings.json)
 2. Make sure dotnet core SDK 2.0 is installed
 3. At the root project server folder cd to App.Api project:
@@ -44,7 +44,7 @@ This is tiny application, at the time start the application I crawed restaurant 
 - Redux.
 - Es6.
 - Semantic.
-### Setup guiline:
+### Setup guideline:
 1. Make sure nodejs & yarn are installed.
 2. At the root folder of the client project run the following command to install dependencies:
     ```
