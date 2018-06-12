@@ -18,7 +18,11 @@ This is tiny application, at the time start the application I crawed restaurant 
     ```
     cd App.Api
     ```
-4. At the command line run the following statements to initialize database:
+4. Install dependencies:
+    ```
+    dotnet restore
+    ```    
+5. At the command line run the following statements to initialize database:
     ```
         dotnet ef database update --startup-project ../App.Api -c PersistedGrantDbContext
 
@@ -26,7 +30,7 @@ This is tiny application, at the time start the application I crawed restaurant 
 
         dotnet ef database update --startup-project ../App.Api -c AppDbContext
     ```
-5. Run the application:
+6. Run the application:
     ```
     dotnet run
     ```
