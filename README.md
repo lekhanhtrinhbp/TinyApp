@@ -4,16 +4,16 @@ This is tiny application, at the time start the application I crawed restaurant 
 
 ## Server(api):
 ### Technical stack:
-- AspnetCore 2.0
-- EntityFramework Core 2.1 & Code first
-- IdentityServer4
-- Restful APIs - [RestaurantsController.cs](https://github.com/newbiecse/TinyApp/blob/master/Server/App.Api/Controllers/RestaurantsController.cs).
+- AspnetCore 2.0.
+- EntityFramework Core 2.1 & Code first.
+- IdentityServer4.
+- RESTful APIs - [RestaurantsController.cs](https://github.com/newbiecse/TinyApp/blob/master/Server/App.Api/Controllers/RestaurantsController.cs).
 - AutoMapper.
-- htmlagilitypack to crawler [RestaurantCrawler.cs](https://github.com/newbiecse/TinyApp/blob/master/Server/App.Core/Services/RestaurantCrawler.cs).
+- Htmlagilitypack to craw [RestaurantCrawler.cs](https://github.com/newbiecse/TinyApp/blob/master/Server/App.Core/Services/RestaurantCrawler.cs).
 - Generic repository in c#.
 ### Setup guiline:
-1. Change connectstring add [App.Api/appsettings.json](https://github.com/newbiecse/TinyApp/blob/master/Server/App.Api/appsettings.json)
-2. Make sure dotnet core SDK is installed
+1. Change connectstring at [App.Api/appsettings.json](https://github.com/newbiecse/TinyApp/blob/master/Server/App.Api/appsettings.json)
+2. Make sure dotnet core SDK 2.0 is installed
 3. At the root project server folder cd to App.Api project:
     ```
     cd App.Api
