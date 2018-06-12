@@ -14,14 +14,15 @@ This is tiny application, at the time start the application I crawed restaurant 
 ### Setup guideline:
 1. Change connectstring at [App.Api/appsettings.json](https://github.com/newbiecse/TinyApp/blob/master/Server/App.Api/appsettings.json)
 2. Make sure dotnet core SDK 2.0 is installed
-3. At the root project server folder cd to App.Api project:
-    ```
-    cd App.Api
-    ```
-4. Install dependencies:
+3. At the server folder run the following command to install dependencies:
     ```
     dotnet restore
     ```    
+4. At the root project server folder cd to App.Api project:
+    ```
+    cd App.Api
+    ```
+
 5. At the command line run the following statements to initialize database:
     ```
         dotnet ef database update --startup-project ../App.Api -c PersistedGrantDbContext
